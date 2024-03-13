@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookings</title>\
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <section class="row">
+            {{message}}
+            {% for row in rows %}
+            <!-- 0,1,2,3,4,5 are columns in a row, Think of one row -->
+            <!-- So we do row[column position] -->
+                 <h4>Booking ID: {{ row[0] }}</h4>
+                 <b>From {{ row[1] }}</b><br>
+                 <b>To {{ row[2] }}</b><br>
+                 <b>Travel Date {{ row[3] }}</b><br>
+                 <i>Travel time {{ row[4] }}</i><br>
+                 <h4>KES {{ row[5]}}</h4>
+                 <br><br>
+                 <hr>           
+            {% endfor %}
+        </section>
+        <a href="/" class="btn btn-outline-success">Back Home</a>
+    </div>    
+</body>
+</html>

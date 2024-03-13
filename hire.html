@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online car hire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+       <br>
+       <a href="/" class="btn btn-outline-warning">Back Home</a>
+       <section class="row">
+          <div class="col-md-12">
+               <h2>Need a car for hire,check out for our latest</h2>
+               <img src="../static/bus8.png" alt="" width="100%">
+          </div>
+       </section>
+       <br>
+       <h2>Featured cars</h2>
+       <section class="row">
+             {{message}}
+             {%   for row in rows    %}
+                <div class="col-md-4">
+                    <div class="card shadow p-2">
+                        <img src="{{ row[7] }}" alt="" height="150">
+                        <div class="card-body">
+                         <h4>{{ row[1] }}</h4>
+                         <p>{{ row[3] }}</p>
+                         <b> <strike>KES {{ row[4] }}</strike></b>
+                         <b class="text-info"> KES {{ row[5] }}</b><br>
+                         <i>{{ row[0] }}  -  Capacity: {{ row[2] }}</i><br>
+                         <b class="badge bg-info">Discount {{ row[6] }} %</b><br><br>
+                         <!-- Navigate to a new route,carry the reg_no which is in row[0] -->
+                         <!-- We now create a route named /single in python -->
+                         <a href="/single/{{ row[0] }}" class="btn btn-outline-dark">hire Now</a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+             {% endfor   %}
+       </section>
+       <!-- Daraja Safaricom - Create account -->
+       <!-- read about it -->
+    </div>
+    
+</body>
+</html>

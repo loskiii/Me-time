@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <a href="/" class="btn btn-warning">Home Page</a>
+    <h1 class="text-success">Safari Coach</h1>
+    <h3>Create a free account Today</h3>
+    <hr>
+
+    <section class="row">
+        <div class="col-md-4">
+            <form action="/register" method="post">
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <br><br>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <br><br>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <br><br>
+                <!-- Below we have 2 passwords fields to allow user password confirmations -->
+                <input type="password" name="password1" placeholder="Your password" required>
+                <br><br>
+                <input type="password" name="password2" placeholder="Confirm password" required>
+                <br><br>
+                <input type="tel" name="phonenumber" placeholder="Your phone" required>
+                <br><br>
+                <input type="submit" value="Create Account">
+            </form>
+            <br>
+            <!-- To do log in -->
+            <a href="/login" class="btn btn-outline-success">Aleady have an account? Log in here</a>
+        
+
+        </div>
+        <div class="col-md-8">
+            <h2>New routes to Mombasa</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam molestiae, quas libero iusto, reprehenderit dolores odio laudantium voluptatum pariatur repellendus ipsa possimus vero eligendi inventore numquam deserunt similique nemo culpa!</p>            
+        </div>
+
+    </section>
+    <b style="color: goldenrod;">{{message}} </b><br><br>
+    <!-- We need to create a python route -->
+    
+    
+</div>
+    
+</body>
+</html>

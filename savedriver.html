@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <a href="/" class="btn btn-warning">Home Page</a>
+    <br><br>
+    <h1>Safari Coach</h1>
+    <hr>
+    <b style="color: goldenrod;">{{message}} </b><br><br>
+    <div class="container">
+       <section class="row">
+            <div class="col-md-4">
+                <form action="/savedriver" method="post">
+                    <br><br>
+                    <input type="text" name="driver_name" placeholder="Enter Driver's full name" required>
+                    <br><br>
+                    <input type="number" name="driver_phone" placeholder="Enter Driver's phone number" required>
+                    <br><br>
+                    <input type="number" name="idnumber" placeholder="Enter National ID number" required>
+                    <br><br>
+                    <input type="text" name="car_assigned" placeholder="Enter the car assigned" required>
+                    <br><br>
+                    <input type="submit" value="Submit Now">
+                
+                </form>
+            </div>
+            <div class="col-md-8">
+                <h4>Safari Coach Drivers</h4>
+                <img src="../static/driver.jpeg" alt="">
+                <p>Safari coach adds drivers easily to the system.Are you a driver?Why not??</p>
+            </div>
+       </section>
+    </div>
+    
+</body>
+</html>

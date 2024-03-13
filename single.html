@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ row[1] }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <a href="/hire" class="btn btn-warning">More vehicles</a>
+        <section class="row">
+            <div class="col-md-12">
+                 <h3>{{ row[0] }}</h3>
+                 <h4>{{ row[1] }}</h4>
+                 <img src="{{ row[7] }}" alt="" width="100%">
+                 <p>{{ row[3] }}</p>
+                 <h4 class="text-info">To pay KES {{ row[5] }} per hour</h4>
+                 <h5>Processed within 1 hour</h5>
+                 <b>Terms and condition</b>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem, dolor sunt sed ex incidunt alias dolores rerum sapiente possimus, recusandae temporibus quo debitis earum autem quia praesentium, adipisci cum?</p>
+            </div>
+        </section>
+        <section class="row">
+             <h3>Lipa na MPESA</h3>
+             <!-- We will have a route named MPESA -->
+             <form action="/mpesa" method="post">
+                <input type="tel" name="phone" placeholder="2547XXXXXXXX">
+                <br><br>
+                <input type="number" name="amount" value="{{ row[5] }}" placeholder="Enter amount"><br><br>
+                <input type="submit" value="Pay Now">
+             </form>
+        </section>
+    </div>
+    
+</body>
+</html>
